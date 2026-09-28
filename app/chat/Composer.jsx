@@ -52,6 +52,7 @@ export default function Composer() {
             <span className="h-5 w-px bg-gray-200" />
 
             <button
+            title="Branch conversation"
               className="rounded-lg p-1.5 text-gray-500 transition hover:bg-gray-100 hover:text-violet-600"
               aria-label="Branch conversation"
             >
@@ -59,6 +60,7 @@ export default function Composer() {
             </button>
 
             <button
+            title="AI tools"
               className="rounded-lg p-1.5 text-violet-600 transition hover:bg-violet-50"
               aria-label="AI tools"
             >
@@ -68,6 +70,7 @@ export default function Composer() {
 
           <div className="flex items-center gap-1 text-gray-500">
             <button
+            title="New conversation"
               className="rounded-lg p-2 transition hover:bg-gray-100 hover:text-violet-600"
               aria-label="New conversation"
             >
@@ -75,6 +78,7 @@ export default function Composer() {
             </button>
 
             <button
+            title="Conversation history"
               className="rounded-lg p-2 transition hover:bg-gray-100 hover:text-violet-600"
               aria-label="Conversation history"
             >
@@ -85,6 +89,7 @@ export default function Composer() {
 
         <div className="flex items-center gap-2 rounded-2xl border border-violet-100 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3">
           <button
+          title="Attach file"
             className="shrink-0 rounded-lg p-1 text-gray-400 transition hover:bg-gray-100 hover:text-violet-600"
             aria-label="Attach file"
           >
@@ -98,6 +103,7 @@ export default function Composer() {
           />
 
           <button
+           title="Voice input"
             className="hidden rounded-lg p-1 text-gray-500 transition hover:bg-gray-100 hover:text-violet-600 sm:block"
             aria-label="Voice input"
           >
@@ -105,6 +111,7 @@ export default function Composer() {
           </button>
 
           <button
+          title="Send message"
             className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-violet-600 text-white transition hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 sm:h-10 sm:w-10"
             aria-label="Send message"
           >

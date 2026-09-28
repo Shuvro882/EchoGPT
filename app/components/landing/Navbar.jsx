@@ -71,7 +71,7 @@ export default function Navbar() {
       {/* Actions */}
       <div className="flex items-center gap-3">
         <a
-          href="/chat"
+          href="/login"
           className="hidden rounded-full px-4 py-2.5 text-sm font-semibold text-gray-600 transition hover:bg-gray-100 sm:block"
         >
           Sign In

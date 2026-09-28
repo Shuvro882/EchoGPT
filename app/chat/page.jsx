@@ -11,13 +11,13 @@ export default function ChatPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <main className="flex min-h-screen bg-white">
+    <main className="flex h-screen overflow-hidden bg-white">
       <Sidebar
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
       />
 
-      <section className="flex min-w-0 flex-1 flex-col">
+      <section className="flex min-w-0 flex-1 flex-col overflow-y-auto">
   <ChatHeader
     onMenuClick={() => setIsSidebarOpen(true)}
   />

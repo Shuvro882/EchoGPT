@@ -47,12 +47,15 @@ export default function Sidebar({ isOpen, onClose }) {
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 z-50 flex w-72 flex-col border-r border-violet-100 bg-[#f8f7ff] transition-transform duration-300 lg:static lg:translate-x-0 ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
-    >
+  className={`fixed inset-y-0 left-0 z-50 flex h-screen w-72
+  flex-col overflow-hidden border-r border-violet-100
+  bg-[#f8f7ff] transition-transform duration-300
+  lg:static lg:translate-x-0 ${
+    isOpen ? "translate-x-0" : "-translate-x-full"
+  }`}
+>
       {/* Logo */}
-      <div className="flex items-center justify-between px-5 py-5">
+      <div className="sticky top-0 z-10 flex items-center justify-between bg-[#f8f7ff] px-5 py-5">
         <a href="/" className="flex items-center gap-2.5">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600 text-white shadow-lg shadow-violet-200">
             <Sparkles size={20} />
@@ -72,17 +75,18 @@ export default function Sidebar({ isOpen, onClose }) {
         </button>
       </div>
 
-      {/* New Chat */}
-      <div className="px-4">
-        <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-violet-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-200 transition hover:bg-violet-700">
-          <Plus size={18} />
-          New Chat
-        </button>
-      </div>
-
       {/* Scrollable Menu */}
-      <div className="mt-7 flex-1 overflow-y-auto px-4 pb-4">
-        {/* Engagement */}
+<div className="sidebar-scroll mt-7 flex-1 overflow-y-auto px-4 pb-4">
+
+  {/* New Chat */}
+  <div className="mb-7">
+    <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-violet-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-200 transition hover:bg-violet-700">
+      <Plus size={18} />
+      New Chat
+    </button>
+  </div>
+
+  {/* Engagement */}
         <div>
           <p className="px-2 text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400">
             Engagement
