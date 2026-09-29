@@ -57,3 +57,47 @@ textarea {
 .sidebar-scroll::-webkit-scrollbar-thumb:hover {
   background: #8b5cf6;
 }
+
+/* EchoGPT Dark Mode */
+.dark-mode {
+  background-color: #030712;
+  color: #f9fafb;
+}
+
+.dark-mode .bg-white {
+  background-color: #111827 !important;
+}
+
+.dark-mode .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+.dark-mode .bg-gray-100 {
+  background-color: #1f2937 !important;
+}
+
+.dark-mode .text-gray-900 {
+  color: #f9fafb !important;
+}
+
+.dark-mode .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+
+.dark-mode .text-gray-700 {
+  color: #d1d5db !important;
+}
+
+.dark-mode .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+.dark-mode .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+.dark-mode .border-gray-100,
+.dark-mode .border-gray-200,
+.dark-mode .border-gray-300 {
+  border-color: #374151 !important;
+}

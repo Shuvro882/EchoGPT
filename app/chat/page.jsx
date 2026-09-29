@@ -15,21 +15,37 @@ import Store from "../chat-features/Store";
 import AITasks from "../chat-features/AITasks";
 import AIJobAnalysis from "../chat-features/AIJobAnalysis";
 import AISOPBuilder from "../chat-features/AISOPBuilder";
+import Support from "../chat-features/Support";
+import Newsletter from "../chat-features/Newsletter";
+import Subscriptions from "../chat-features/Subscriptions";
+import Settings from "../chat-features/Settings";
 
 export default function ChatPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Home");
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <main className="flex h-screen overflow-hidden bg-white">
+    <main
+  className={`flex h-screen overflow-hidden ${
+    darkMode ? "dark-mode" : "bg-white text-gray-900"
+  }`}
+>
+
       <Sidebar
   isOpen={isSidebarOpen}
   onClose={() => setIsSidebarOpen(false)}
   selectedItem={selectedItem}
   onSelect={setSelectedItem}
+  darkMode={darkMode}
+  setDarkMode={setDarkMode}
 />
 
-      <section className="flex min-w-0 flex-1 flex-col overflow-y-auto">
+      <section
+  className={`flex min-w-0 flex-1 flex-col overflow-y-auto ${
+    darkMode ? "bg-gray-950" : "bg-white"
+  }`}
+>
   <ChatHeader
     onMenuClick={() => setIsSidebarOpen(true)}
   />
@@ -51,7 +67,15 @@ export default function ChatPage() {
   <AIJobAnalysis />
 ) :selectedItem === "AI SOP Builder" ? (
   <AISOPBuilder />
-):(
+): selectedItem === "Support" ? (
+  <Support />
+):selectedItem === "Newsletter" ? (
+  <Newsletter />
+ ) : selectedItem === "Subscriptions" ? (
+  <Subscriptions /> 
+ ): selectedItem === "Settings" ? (
+  <Settings /> 
+ ):(
   <>
     <WelcomeSection />
     <SuggestionCards />
