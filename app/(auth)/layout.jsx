@@ -1,3 +1,4 @@
+
 function WaveCluster({ className = "" }) {
   return (
     <svg
@@ -49,6 +50,34 @@ export default function AuthLayout({ children }) {
       <Dot className="left-[82px] top-[488px]" />
       <Dot className="left-[60px] top-[625px]" />
       <Dot className="right-[32px] top-[124px]" />
+      {/* Bottom-right arrow icons */}
+{/* Bottom-right chevron shapes */}
+<div className="absolute bottom-0 right-0 z-10 flex h-28 w-48 items-end justify-end">
+  {/* Outline chevron */}
+  <svg
+    viewBox="0 0 100 100"
+    className="absolute bottom-0 right-20 h-24 w-28 text-violet-600"
+  >
+    <polygon
+      points="30,8 72,8 52,50 72,92 30,92 2,50"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="4"
+      strokeLinejoin="round"
+    />
+  </svg>
+
+  {/* Solid chevron */}
+  <svg
+    viewBox="0 0 100 100"
+    className="absolute bottom-0 right-0 h-24 w-28 text-violet-600"
+  >
+    <polygon
+      points="30,8 72,8 52,50 72,92 30,92 2,50"
+      fill="currentColor"
+    />
+  </svg>
+</div>
 
       {/* Page content */}
       <div className="relative z-10">

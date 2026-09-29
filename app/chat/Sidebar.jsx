@@ -24,7 +24,12 @@ import {
   ChevronLeft,
 } from "lucide-react";
 
-export default function Sidebar({ isOpen, onClose }) {
+export default function Sidebar({
+  isOpen,
+  onClose,
+  selectedItem,
+  onSelect,
+}) {
   const engagementItems = [
     { label: "Image Studio", icon: Image, pro: true },
     { label: "Video Studio", icon: Video, pro: true },
@@ -98,9 +103,14 @@ export default function Sidebar({ isOpen, onClose }) {
 
               return (
                 <button
-                  key={item.label}
-                  className="group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-gray-600 transition hover:bg-white hover:text-violet-600 hover:shadow-sm"
-                >
+  key={item.label}
+  onClick={() => onSelect(item.label)}
+  className={`group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition ${
+    selectedItem === item.label
+      ? "bg-white text-violet-600 shadow-sm"
+      : "text-gray-600 hover:bg-white hover:text-violet-600 hover:shadow-sm"
+  }`}
+>
                   <Icon
                     size={18}
                     strokeWidth={1.8}
@@ -135,9 +145,14 @@ export default function Sidebar({ isOpen, onClose }) {
 
               return (
                 <button
-                  key={item.label}
-                  className="group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-gray-600 transition hover:bg-white hover:text-violet-600 hover:shadow-sm"
-                >
+  key={item.label}
+  onClick={() => onSelect(item.label)}
+  className={`group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition ${
+    selectedItem === item.label
+      ? "bg-white text-violet-600 shadow-sm"
+      : "text-gray-600 hover:bg-white hover:text-violet-600 hover:shadow-sm"
+  }`}
+>
                   <Icon
                     size={18}
                     strokeWidth={1.8}

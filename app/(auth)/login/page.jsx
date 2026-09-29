@@ -131,10 +131,10 @@ export default function LoginPage() {
               key={provider.key}
               type="button"
               className={
-                provider.variant === "solid"
-                  ? "flex w-full items-center justify-center gap-3 rounded-xl bg-violet-600 py-3 font-semibold text-white shadow-md shadow-violet-300/50 transition hover:bg-violet-700"
-                  : "flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 py-3 font-semibold text-gray-800 transition hover:bg-gray-50"
-              }
+  provider.variant === "solid"
+    ? "flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-violet-600 py-3 font-semibold text-white shadow-md shadow-violet-300/50 transition-all duration-200 hover:bg-violet-700"
+    : "flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white py-3 font-semibold text-gray-800 transition-all duration-200 hover:border-violet-600 hover:bg-violet-600 hover:text-white hover:shadow-md hover:shadow-violet-200"
+}
             >
               {provider.icon === "email" ? (
                 <Mail size={18} />
